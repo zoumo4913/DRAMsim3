@@ -17,6 +17,10 @@ class MemorySystem {
     void RegisterCallbacks(std::function<void(uint64_t)> read_callback,
                            std::function<void(uint64_t)> write_callback);
     double GetTCK() const;
+    uint64_t GetChannelMask() const;
+    uint64_t GetRankMask() const;
+    uint64_t GetBankMask() const;
+    uint64_t GetRowMask() const;
     int GetBusBits() const;
     int GetBurstLength() const;
     int GetQueueSize() const;

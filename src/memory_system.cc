@@ -25,6 +25,14 @@ void MemorySystem::ClockTick() { dram_system_->ClockTick(); }
 
 double MemorySystem::GetTCK() const { return config_->tCK; }
 
+uint64_t MemorySystem::GetChannelMask() const { return config_->ch_mask; }
+
+uint64_t MemorySystem::GetRankMask() const { return config_->ra_mask; }
+
+uint64_t MemorySystem::GetBankMask() const { return config_->ba_mask; }
+
+uint64_t MemorySystem::GetRowMask() const { return config_->ro_mask; }
+
 int MemorySystem::GetBusBits() const { return config_->bus_width; }
 
 int MemorySystem::GetBurstLength() const { return config_->BL; }
